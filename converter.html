@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Converter</title>
+  </head>
+  <style>
+    #main {
+      background-color: purple;
+      height: 800px;
+      width: 100%;
+    }
+    #sec {
+      background-color: yellow;
+      height: 500px;
+      width: 500px;
+      margin-top: -600px;
+      margin-left: 500px;
+      border-radius: 25px;
+    }
+    #head {
+
+      text-align: center;
+    
+    }
+    
+
+    #in {
+      height: 50px;
+      margin-left: 30%;
+      margin-top: 30%;
+      border-radius: 10px;
+      background-color: gray;
+    }
+    #conv {
+      height: 50px;
+      margin-left: 200px;
+      border-radius: 10px;
+      background-color: green;
+      margin-top: 20px;
+    }
+  </style>
+  <body>
+    <div id="main">
+      <h1 id="head">Converter</h1>
+    </div>
+    <div id="sec">
+      <input type="text" id="in" />
+      <h1 id="out"></h1>
+      <h1 id="out1"></h1>
+      <br />
+      <button id="conv" onclick="display()">Convert</button>
+    </div>
+    <script>
+        function display(){
+            let i = 2.54;
+            let a = document.getElementById("in").value;
+             let j = i*a;
+             let z = a/i;
+             let k = j + " inches";
+             let c = z + " cm";
+             let b = document.getElementById("out");
+             let e = document.getElementById("out1");
+             b.innerHTML = k;
+             e.innerHTML = c;
+        }
+       
+
+    </script>
+  </body>
+</html>
